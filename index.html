@@ -23,15 +23,43 @@
     body{
       margin:0;
       min-height:100vh;
-      display:flex; align-items:center; justify-content:center; flex-direction:column;
       background: radial-gradient(circle at 20% 0%, var(--bg2), var(--bg1) 60%);
       color:var(--ink);
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
       overflow-x:hidden;
-      padding: 48px 20px;
+      padding: 0;
     }
 
-    .wrap{ width:100%; max-width:780px; text-align:center; animation:fadeIn .8s ease-out }
+    /* ===== HEADER ===== */
+    header{
+      width:100%;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #0072ff, #ffffff);
+      color:#00122a;
+      text-align:center;
+      animation:fadeIn 1.2s ease-out;
+      box-shadow:0 4px 30px rgba(0,0,0,.25);
+    }
+    header h1{
+      font-size: clamp(34px, 6vw, 58px);
+      margin:0;
+      font-weight:700;
+      background: linear-gradient(to right, #001F3F, #0072ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow: 0 0 20px rgba(0,114,255,.3);
+    }
+    header p{
+      max-width:680px;
+      margin:18px auto 0;
+      font-size: clamp(15px, 2.8vw, 20px);
+      line-height:1.6;
+      color:#001a33;
+      opacity:.9;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .wrap{ width:100%; max-width:780px; text-align:center; animation:fadeIn .8s ease-out; margin:48px auto; padding:0 20px; }
     h1{
       font-size: clamp(28px, 5vw, 44px);
       margin:0 0 8px;
@@ -80,6 +108,18 @@
   </style>
 </head>
 <body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <h1>Base Onchain Explorer</h1>
+    <p>
+      A journey through the Base network where experiments, rituals, and randomness  
+      blend into something uniquely onchain.  
+      Discover, deploy, and let the chain decide.
+    </p>
+  </header>
+
+  <!-- MAIN SECTION -->
   <main class="wrap">
     <h1>👋 Hey, I'm Beny (Bandit.base.eth)</h1>
     <p class="tagline">Exploring onchain rituals on <b>Base</b> one deploy, one survival at a time.</p>
@@ -87,9 +127,9 @@
     <section class="card">
       <div class="links">
         <!-- social / identity -->
-        <a class="btn" href="https://farcaster.xyz/banditi" target="_blank">🌐 Farcaster</a>
-        <a class="btn ghost" href="https://base.app/profile/0x4ae70118dd2cb814404daaa064dab470b7f76542" target="_blank">💠 Base app profile</a>
-        <a class="btn ghost" href="https://zora.co/invite/banditi" target="_blank">🖼️ Zora</a>
+        <a class="btn" href="https://farcaster.xyz/banditi" target="_blank">🟦 Farcaster</a>
+        <a class="btn ghost" href="https://base.app/profile/0x4ae70118dd2cb814404daaa064dab470b7f76542" target="_blank">⏹️ Base app profile</a>
+        <a class="btn ghost" href="https://zora.co/invite/banditi" target="_blank">🔵 Zora</a>
       </div>
 
       <div class="links" style="margin-top:14px">
@@ -111,8 +151,7 @@
     </section>
 
     <footer>
-      Built by <a href="https://x.com/Alidepok1" target="_blank">Bandit.base.eth</a> —
-      a proud Base contributor 💙
+      Built by <a href="https://x.com/Alidepok1" target="_blank">Bandit.base.eth</a> — a proud Base contributor 💙
     </footer>
   </main>
 </body>
